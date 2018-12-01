@@ -1,5 +1,5 @@
 ///
-/// Massively by HTML5 UP
+/// Editorial by HTML5 UP
 /// html5up.net | @ajlkn
 /// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 ///
@@ -13,100 +13,27 @@
 	}
 
 	header {
-		cursor: default;
-
-		> .date {
-			display: block;
-			font-size: 0.8rem;
-			height: 1;
-			margin: 0 0 (_size(element-margin) * 0.5) 0;
-			position: relative;
-		}
-
-		> p {
-			font-style: italic;
-		}
-
-		> h1 + p {
-			font-size: 1.1rem;
-			margin-top: -0.5rem;
-			line-height: 2;
-		}
-
-		> h2 + p {
-			font-size: 1rem;
-			margin-top: -0.75rem;
-		}
-
-		> h3 + p {
-			font-size: 0.9rem;
-			margin-top: -0.75rem;
-		}
-
-		> h4 + p {
-			font-size: 0.8rem;
-			margin-top: -0.75rem;
+		p {
+			font-family: _font(family-heading);
+			font-size: 1em;
+			font-weight: _font(weight-heading-alt);
+			letter-spacing: _font(kerning-heading);
+			margin-top: -0.5em;
+			text-transform: uppercase;
 		}
 
 		&.major {
-			margin: 0 0 (_size(element-margin) * 2) 0;
-			text-align: center;
-
 			> :last-child {
-				margin-bottom: 0;
-			}
-
-			> p {
-				margin-top: 0;
-				text-align: center;
-			}
-
-			> .date {
-				font-size: 1rem;
-				margin: 0 0 (_size(element-margin) * 2) 0;
-
-				&:before, &:after {
-					content: '';
-					display: block;
-					position: absolute;
-					top: 50%;
-					width: calc(50% - 6rem);
-					border-top: solid 2px;
-				}
-
-				&:before {
-					left: 0;
-				}
-
-				&:after {
-					right: 0;
-				}
-			}
-		}
-
-		@include breakpoint('<=medium') {
-			br {
-				display: none;
-			}
-		}
-
-		@include breakpoint('<=small') {
-			&.major {
+				border-bottom: solid 3px _palette(accent);
+				display: inline-block;
 				margin: 0 0 _size(element-margin) 0;
+			 	padding: 0 0.75em 0.5em 0;
+			}
+		}
+
+		&.main {
+			> :last-child {
+				margin: 0 0 (_size(element-margin) * 0.5) 0;
 			}
 		}
 	}
-
-	@mixin color-section($p: null) {
-		header {
-			&.major {
-				.date {
-					&:before, &:after {
-						border-top-color: _palette($p, border);
-					}
-				}
-			}
-		}
-	}
-
-	@include color-section;

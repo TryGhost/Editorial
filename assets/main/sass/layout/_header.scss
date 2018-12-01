@@ -1,5 +1,5 @@
 ///
-/// Massively by HTML5 UP
+/// Editorial by HTML5 UP
 /// html5up.net | @ajlkn
 /// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 ///
@@ -7,57 +7,45 @@
 /* Header */
 
 	#header {
-		@include color-typography(invert);
-		@include vendor('align-items', 'center');
 		@include vendor('display', 'flex');
-		@include vendor('flex-direction', 'column');
-		@include vendor('justify-content', 'flex-end');
-		@include vendor('pointer-events', 'none');
-		@include vendor('user-select', 'none');
-		height: 20rem;
-		padding-bottom: (_size(padding) * 4);
+		border-bottom: solid 5px _palette(accent);
+		padding: 6em 0 1em 0;
 		position: relative;
-		text-align: center;
-		z-index: 2;
 
-		.logo {
-			@include vendor('transition', (
-				'border-color #{_duration(transition)} ease-in-out',
-				'color #{_duration(transition)} ease-in-out',
-				'opacity 0.5s ease',
-				'transform 0.5s ease',
-				'visibility 0.5s'
-			));
-			@include vendor('pointer-events', 'auto');
-			border-style: solid;
-			border-color: _palette(invert, border);
-			border-width: 5px !important;
-			font-family: _font(family-heading);
-			font-size: 2.25rem;
-			font-weight: _font(weight-heading);
-			letter-spacing: 0.075em;
-			line-height: 1;
-			padding: 1rem 1.75rem;
-			text-transform: uppercase;
-			visibility: visible;
-
-			&:hover {
-				border-color: _palette(invert, accent) !important;
-				color: _palette(invert, accent) !important;
-			}
+		> * {
+			@include vendor('flex', '1');
+			margin-bottom: 0;
 		}
 
-		@include breakpoint('<=medium') {
-			height: 14rem;
-			padding-bottom: (_size(padding) * 2);
+		.logo {
+			border-bottom: 0;
+			color: inherit;
+			font-family: _font(family-heading);
+			font-size: 1.125em;
+		}
+
+		.icons {
+			text-align: right;
+		}
+
+		@include breakpoint('<=xlarge') {
+			padding-top: 5em;
 		}
 
 		@include breakpoint('<=small') {
-			padding-bottom: (_size(padding) * 1.5);
+			padding-top: 6.5em;
 
 			.logo {
-				font-size: 1.75rem;
-				border-width: 3px !important;
+				font-size: 1.25em;
+				margin: 0;
+			}
+
+			.icons {
+				height: (6.25em / 1.25);
+				line-height: (6.25em / 1.25);
+				position: absolute;
+				right: (-0.625em / 1.25);
+				top: 0;
 			}
 		}
 	}
