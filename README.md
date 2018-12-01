@@ -7,7 +7,7 @@ image and scroll effects powered by Scrollex. Originally created by [@ajlkn](htt
 
 &nbsp;
 
-![image](https://user-images.githubusercontent.com/120485/49293031-7276b000-f4e1-11e8-8b71-43dc53c67f00.png)
+![screenshot](https://user-images.githubusercontent.com/120485/49328081-0e192680-f59d-11e8-808a-e6d6bcfa8419.png)
 
 
 &nbsp;
