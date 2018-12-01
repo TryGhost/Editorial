@@ -1,0 +1,24 @@
+{{!< default}}
+
+{{#post}}
+{{!-- Everything inside the #post tags pulls data from the page --}}
+
+<main id="main">
+    <section class="post">
+
+        <header class="major">
+            <h1>{{title}}</h1>
+        </header>
+
+        {{#if feature_image}}
+        <div class="image main"><img src="{{img_url feature_image}}" alt="{{title}}" /></div>
+        {{/if}}
+
+        <div class="content">
+            {{content}}
+        </div>
+
+    </section>
+</main>
+
+{{/post}}
