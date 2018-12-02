@@ -2,50 +2,56 @@
 {{!-- The tag above means: insert everything in this file
 into the {body} of the default.hbs template --}}
 
-{{!-- Main --}}
-<main id="main">
 
-    {{!-- Featured Post --}}
-    {{#get "posts" filter="featured:true" limit="1" as |featured_post|}}
-        {{#foreach featured_post}}
-            <article class="post featured">
-                <header class="major">
-                    <span class="date">{{date format="MMM D, YYYY"}}</span>
-                    <h2><a href="{{url}}">{{title}}</a></h2>
-                    <p>{{excerpt words="44"}}</p>
+{{!-- Featured Post --}}
+{{#is "home"}}
+{{#get "posts" filter="featured:true" limit="1" as |featured_post|}}
+    {{#foreach featured_post}}
+        <article id="banner">
+            <div class="content">
+                <header>
+                    <h1><a href="{{url}}">{{title}}</a></h1>
+                    {{#if custom_excerpt}}<p>{{custom_excerpt}}</p>{{/if}}
                 </header>
-                {{#if feature_image}}
-                <a href="{{url}}" class="image main"><img src="{{img_url feature_image}}" alt="{{title}}" /></a>
-                {{/if}}
-                <ul class="actions special">
-                    <li><a href="{{url}}" class="button large">Full Story</a></li>
+                {{content words="42"}}
+                <ul class="actions">
+                    <li><a href="{{url}}" class="button big">Learn More</a></li>
                 </ul>
-            </article>
-        {{/foreach}}
-    {{/get}}
+            </div>
+            {{#if feature_image}}
+            <a href="{{url}}" class="image object">
+                <img src="{{img_url feature_image}}" alt="{{title}}" />
+            </a>
+            {{/if}}
+        </article>
+    {{/foreach}}
+{{/get}}
+{{/is}}
 
-    {{!-- Posts --}}
+{{!-- Posts --}}
+<section>
+
+    <header class="major">
+        <h2>Recent posts</h2>
+    </header>
+
     <section class="posts">
-
         {{#foreach posts}}
         <article>
-            <header>
-                <span class="date">{{date format="MMM D, YYYY"}}</span>
-                <h2><a href="{{url}}">{{title}}</a></h2>
-            </header>
             {{#if feature_image}}
             <a href="{{url}}" class="image fit"><img src="{{img_url feature_image}}" alt="{{title}}" /></a>
             {{/if}}
+            <h3><a href="{{url}}">{{title}}</a></h3>
             <p>{{excerpt words="33"}}</p>
             <ul class="actions special">
                 <li><a href="{{url}}" class="button">Full Story</a></li>
             </ul>
         </article>
         {{/foreach}}
-
     </section>
 
-    {{!-- Pagination --}}
-    {{pagination}}
+</section>
 
-</main>
+{{!-- Pagination --}}
+{{pagination}}
+

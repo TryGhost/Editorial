@@ -3,22 +3,22 @@
 {{#post}}
 {{!-- Everything inside the #post tags pulls data from the page --}}
 
-<main id="main">
-    <section class="post">
 
-        <header class="major">
-            <h1>{{title}}</h1>
-        </header>
+<section>
 
-        {{#if feature_image}}
-        <div class="image main"><img src="{{img_url feature_image}}" alt="{{title}}" /></div>
-        {{/if}}
+    <header class="main content">
+        <h1>{{title}}</h1>
+    </header>
 
-        <div class="content">
-            {{content}}
-        </div>
+    {{#if feature_image}}
+    <div class="image main"><img src="{{img_url feature_image}}" alt="{{title}}" /></div>
+    {{/if}}
 
-    </section>
-</main>
+    <div class="content">
+        {{content}}
+    </div>
+
+</section>
+
 
 {{/post}}

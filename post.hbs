@@ -4,68 +4,63 @@ into the {body} of the default.hbs template --}}
 
 {{#post}}
 {{!-- Everything inside the #post tags pulls data from the post --}}
+<section>
 
-<main id="main">
-
-    <section class="post">
-
-        <header class="major">
-            <span class="date">{{date format="MMMM D, YYYY"}}</span>
-            <h1>{{title}}</h1>
-            {{#if custom_excerpt}}
-                <p class="content">{{custom_excerpt}}</p>
-            {{/if}}
-        </header>
-
-        {{#if feature_image}}
-        <div class="image main"><img src="{{img_url feature_image}}" alt="{{title}}" /></div>
+    <header class="main content">
+        <span class="date">{{date format="MMMM D, YYYY"}}</span>
+        <h1>{{title}}</h1>
+        {{#if custom_excerpt}}
+            <p class="content">{{custom_excerpt}}</p>
         {{/if}}
+    </header>
 
-        <div class="content">
-            {{content}}
+    {{#if feature_image}}
+    <div class="image main"><img src="{{img_url feature_image}}" alt="{{title}}" /></div>
+    {{/if}}
+
+    <div class="content">
+        {{content}}
+    </div>
+
+    {{!-- Email subscribe form at the bottom of the page --}}
+    {{#if @labs.subscribers}}
+    <section class="subscribe-form">
+        <h3 class="subscribe-form-title">Subscribe to {{@blog.title}}</h3>
+        <p>Get the latest posts delivered right to your inbox</p>
+        {{subscribe_form placeholder="youremail@example.com"}}
+    </section>
+    {{/if}}
+
+    <footer class="post-footer">
+
+        <div class="authors">
+            {{#foreach authors}}
+            <a class="author-box" href="{{url}}">
+                {{#if profile_image}}
+                <img class="author-profile-image" src="{{profile_image}}" alt="{{name}}" />
+                {{/if}}
+                <section class="author-box-content">
+                    <div class="author-box-label">Author</div>
+                    <h5 class="author-box-name">{{name}}</h5>
+                    {{#if bio}}
+                    <p>{{bio}}</p>
+                    {{else}}
+                    <p>Read more posts by this author.</p>
+                    {{/if}}
+                </section>
+            </a>
+            {{/foreach}}
         </div>
 
-        {{!-- Email subscribe form at the bottom of the page --}}
-        {{#if @labs.subscribers}}
-        <section class="subscribe-form">
-            <h3 class="subscribe-form-title">Subscribe to {{@blog.title}}</h3>
-            <p>Get the latest posts delivered right to your inbox</p>
-            {{subscribe_form placeholder="youremail@example.com"}}
-        </section>
-        {{/if}}
+    </footer>
 
-        <footer class="post-footer">
-
-            <div class="authors">
-                {{#foreach authors}}
-                <a class="author-box" href="{{url}}">
-                    {{#if profile_image}}
-                    <img class="author-profile-image" src="{{profile_image}}" alt="{{name}}" />
-                    {{/if}}
-                    <section class="author-box-content">
-                        <div class="author-box-label">Author</div>
-                        <h5 class="author-box-name">{{name}}</h5>
-                        {{#if bio}}
-                        <p>{{bio}}</p>
-                        {{else}}
-                        <p>Read more posts by this author.</p>
-                        {{/if}}
-                    </section>
-                </a>
-                {{/foreach}}
-            </div>
-
-        </footer>
-
-        {{!--
-        <section class="post-full-comments">
-            If you want to embed comments, this is a good place to do it!
-        </section>
-        --}}
+    {{!--
+    <section class="post-full-comments">
+        If you want to embed comments, this is a good place to do it!
     </section>
+    --}}
 
-</main>
-
+</section>
 {{/post}}
 
 <script>
