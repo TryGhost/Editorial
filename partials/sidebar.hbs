@@ -2,7 +2,7 @@
     <div class="inner">
 
         {{!-- Nav - partials/navigation.hbs --}}
-        {{#if @blog.navigation}}
+        {{#if @site.navigation}}
             {{navigation}}
         {{/if}}
 
@@ -40,7 +40,7 @@
 
         {{!-- Footer --}}
         <footer id="footer">
-            <p class="copyright">&copy; {{@blog.title}} - All rights reserved<br>
+            <p class="copyright">&copy; {{@site.title}} - All rights reserved<br>
             Design: <a href="https://html5up.net" target="_blank" rel="noopener">HTML5 UP</a>, Published with <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a></p>
         </footer>
 

@@ -26,19 +26,19 @@
 
                 {{!-- Header --}}
                 <header id="header">
-                    {{#if @blog.logo}}
-                        <a href="{{@blog.url}}" class="logo image"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>
+                    {{#if @site.logo}}
+                        <a href="{{@site.url}}" class="logo image"><img src="{{@site.logo}}" alt="{{@site.title}}" /></a>
                     {{else}}
-                        <a href="{{@blog.url}}" class="logo">{{@blog.title}}</a>
+                        <a href="{{@site.url}}" class="logo">{{@site.title}}</a>
                     {{/if}}
                     <ul class="icons">
-                        {{#if @blog.twitter}}
-                            <li><a href="{{twitter_url @blog.facebook}}" class="icon fa-twitter" title="Twitter"><span class="label">Twitter</span></a></li>
+                        {{#if @site.twitter}}
+                            <li><a href="{{twitter_url @site.facebook}}" class="icon fa-twitter" title="Twitter"><span class="label">Twitter</span></a></li>
                         {{/if}}
-                        {{#if @blog.facebook}}
-                            <li><a href="{{facebook_url @blog.facebook}}" class="icon fa-facebook" title="Facebook"><span class="label">Facebook</span></a></li>
+                        {{#if @site.facebook}}
+                            <li><a href="{{facebook_url @site.facebook}}" class="icon fa-facebook" title="Facebook"><span class="label">Facebook</span></a></li>
                         {{/if}}
-                        <li><a href="https://feedly.com/i/subscription/feed/{{@blog.url}}/rss/" class="icon fa-rss" target="_blank" rel="noopener"><span class="label" title="RSS">RSS</span></a></li>
+                        <li><a href="https://feedly.com/i/subscription/feed/{{@site.url}}/rss/" class="icon fa-rss" target="_blank" rel="noopener"><span class="label" title="RSS">RSS</span></a></li>
                     </ul>
                 </header>
 
