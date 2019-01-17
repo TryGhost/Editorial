@@ -41,7 +41,8 @@ gulp.task('watch', function () {
 gulp.task('zip', ['css'], function () {
     var targetDir = 'dist/';
     var themeName = require('./package.json').name;
-    var filename = themeName + '.zip';
+    var version = require('./package.json').version;
+    var filename = themeName + '-' + version + '.zip';
 
     return gulp.src([
         '**',
