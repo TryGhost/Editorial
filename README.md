@@ -1,4 +1,8 @@
-# Editorial
+# MSCC Podcast
+
+MSCC Podcast is based on Editorial, a free, open source theme for Ghost.
+
+## Editorial
 
 This is Editorial, a news-oriented design built around a dynamic 'locking' sidebar (try the toggle to see it in action!) and purpose built for content-centric sites. Originally created by [@ajlkn](https://twitter.com/ajlkn) for [HTML5 UP](https://html5up.net) and later ported to [Ghost](https://ghost.org)
 
