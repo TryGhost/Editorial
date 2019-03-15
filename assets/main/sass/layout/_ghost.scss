@@ -186,6 +186,11 @@
 // Content
 // --------------------------------------------
 
+// Markdown images and videos
+.content p > img, .content p > video {
+    max-width: 100%;
+}
+
 .kg-card {
     margin: 0 0 2rem 0;
 }
@@ -198,7 +203,7 @@
 }
 
 .kg-image {
-    max-width: 100%;
+    width: 100%;
 }
 
 .kg-card figcaption {
@@ -234,7 +239,7 @@
     position: relative;
     margin-left: -14.1rem;
     margin-right: -14.1rem;
-    width: calc(100% + 28.2rem);
+    width: calc(100% + 28.25rem);
 
     @include breakpoint('<=large') {
         margin-left: -8rem;
