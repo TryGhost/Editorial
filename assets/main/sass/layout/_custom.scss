@@ -1,0 +1,7 @@
+@import "libs/vendor";
+
+ul.actions {
+    &.special {
+        @include vendor('justify-content', 'left');
+    }
+}
