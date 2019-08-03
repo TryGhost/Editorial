@@ -1,0 +1,21 @@
+<aside class="blog-sidebar">
+  <section class="recent-posts">
+    <h3>Recent posts</h3>
+    <ol>
+      <li><a href=""></a></li>
+    </ol>
+  </section>
+
+  {{#get "posts" filter="featured:true" limit="3" as |featured|}}
+  <section class="featured-posts">
+    <h3>Featured posts</h3>
+    <ol>
+        {{#foreach featured}}
+        <li><a href="{{url}}">{{title}}</a></li>
+        {{/foreach}}
+    </ol>
+  </section>
+  {{else}}
+  <p>Content for a fallback when no related posts are available.</p>
+  {{/get}}
+</aside>

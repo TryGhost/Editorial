@@ -1,0 +1,8 @@
+<div class="social-share">
+    <div class="social-share-label">{{t "Share this"}}</div>
+    <a href="http://twitter.com/share?text={{encode title}}&amp;url={{url absolute="true"}}" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Twitter" class="icon fa-twitter social-share-link"><span class="label">Twitter</span></a>
+    <a href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Facebook" class="icon fa-facebook social-share-link"><span class="label">Facebook</span></a>
+    <a href="http://www.reddit.com/submit?url={{url absolute="true"}}&amp;title={{encode title}}" onclick="window.open(this.href, 'reddit-share', 'width=490,height=530');return false;" title="Reddit" class="icon fa-reddit social-share-link"><span class="label">Reddit</span></a>
+    <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url={{url absolute="true"}}&amp;title={{encode title}}" onclick="window.open(this.href, 'linkedin-share', 'width=490,height=530');return false;" title="LinkedIn" class="icon fa-linkedin social-share-link"><span class="label">LinkedIn</span></a>
+    <a href="http://pinterest.com/pin/create/button/?url={{url absolute="true"}}&amp;description={{encode title}}" onclick="window.open(this.href, 'pinterest-share', 'width=490,height=530');return false;" title="Pinterest" class="icon fa-pinterest social-share-link"><span class="label">Pinterest</span></a>
+</div>

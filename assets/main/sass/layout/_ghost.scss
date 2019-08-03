@@ -58,7 +58,6 @@
     border-top: solid 2px rgba(210, 215, 217, 0.75);
 }
 
-
 // Tag Archive
 // --------------------------------------------
 
@@ -121,6 +120,42 @@
     max-width: 700px;
 }
 
+.post-tags{
+    .tags-box-label{
+        font-family: _font(family-heading);
+        font-size: 0.7rem;
+        line-height: 1em;
+        font-weight: 300;
+        text-transform: uppercase;
+        color: #999;
+    }
+}
+
+.social-share{
+    padding-top: 3%;
+
+    .social-share-label{
+        font-family: _font(family-heading);
+        font-size: 0.7rem;
+        line-height: 1em;
+        font-weight: 300;
+        text-transform: uppercase;
+        color: #999;
+        margin-bottom: 3px;
+    }
+
+    .social-share-link{
+        padding-right: 2%;
+        font-size: 2em;
+        color: #7f888f;
+
+        &:hover{
+            border-bottom-color: #f56a6a;
+            color: #f56a6a !important;
+        }
+    }
+}
+
 .authors {
     display: flex;
     justify-content: center;
@@ -142,7 +177,7 @@
 }
 
 .author-box:hover .author-box-name {
-    color: #18bfef;
+    color: #f56a6a;
     transition: color 0.2s ease;
 }
 

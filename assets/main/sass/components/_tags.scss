@@ -1,0 +1,43 @@
+///
+/// Editorial by HTML5 UP
+/// html5up.net | @ajlkn
+/// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+///
+/// this file was added by Aytac Kirmizi
+
+/* tags */
+
+.post-tags{
+    a{
+        border-bottom: none !important;
+        font-size: x-small;
+        margin: 0 1% 0 0;
+        .tag-title::before{
+            content: '#';
+        }
+
+        .tag-title.button {
+            color: #7f888f !important;
+            box-shadow: inset 0 0 0 1px #7f888f;
+            margin-top: 2%;
+
+            &:hover{
+                background-color: rgba(245,106,106,0.05);
+                color: #f56a6a !important;
+                box-shadow: inset 0 0 0 1px #f56a6a;
+            }
+        }
+    }
+}
+
+@include breakpoint('<=medium') {
+    article{
+        .post-tags{
+            a{
+                .tag-title.button {
+                    margin-top: 2%;
+                }
+            }
+        }
+    }
+}

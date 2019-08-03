@@ -64,7 +64,7 @@
 
 				> :last-child {
 					margin-bottom: 0;
-				}
+                }
 
 				&:last-child {
 					border-bottom: 0;
@@ -79,7 +79,31 @@
 				margin: ($pad * -1) 0 ($pad * 2) ($pad * -1);
 				padding: $pad;
 				width: calc(100% + #{$pad * 2});
-			}
+            }
+
+            > #navigation {
+                margin: 0;
+                padding: 0;
+                list-style-type: none;
+                float: left;
+                display: inline;
+                font-size: 0.9em;
+                display: inline;
+
+                li {
+                    float: left;
+                    display: inline;
+                    overflow: hidden;
+
+                    a {
+                        color: #9fa3a6;
+                    }
+                }
+
+                li:nth-child(n+2){
+                    padding-left: 0.5em;
+                }
+            }
 		}
 
 		.toggle {

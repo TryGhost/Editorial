@@ -1,0 +1,19 @@
+<div id="sidebar_post">
+    <div id="post_info">
+        <header class="major">
+            <h2>{{t "about this post"}}</h2>
+        </header>
+        {{!-- Author info --}}
+        {{#primary_author}}
+        <div class="authors">
+            {{>widget_authorinfo}}
+        </div>
+        {{/primary_author}}
+
+        {{#if tags}}
+            {{>widget_tags}}
+        {{/if}}
+
+        {{>widget_post_share}}
+    </div>
+</div>

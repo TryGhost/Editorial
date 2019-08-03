@@ -1,65 +1,62 @@
 {
-    "name": "editorial",
-    "description": "This is Editorial, a news-oriented theme for Ghost.",
-    "demo": "https://editorial.ghost.io",
-    "version": "1.0.0",
-    "engines": {
-        "ghost": ">=2.0.0",
-        "ghost-api": "v2"
-    },
-    "license": "MIT",
-    "screenshots": {
-        "desktop": "assets/screenshot-desktop.jpg"
-    },
-    "scripts": {
-        "dev": "gulp",
-        "zip": "gulp zip",
-        "pretest": "gulp build",
-        "test": "gscan .",
-        "preship": "yarn test",
-        "ship": "STATUS=$(git status --porcelain); echo $STATUS; if [ -z \"$STATUS\" ]; then yarn version && git push --follow-tags; fi"
-    },
-    "author": {
-        "name": "Ghost Foundation",
-        "email": "hello@ghost.org",
-        "url": "https://ghost.org"
-    },
-    "gpm": {
-        "type": "theme",
-        "categories": [
-            "Minimal",
-            "Magazine"
-        ]
-    },
-    "keywords": [
-        "ghost",
-        "theme",
-        "ghost-theme"
-    ],
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/TryGhost/Editorial.git"
-    },
-    "bugs": "https://github.com/TryGhost/Editorial/issues",
-    "contributors": [
-        {
-            "name": "ajlkn",
-            "email": "aj@lkn.io",
-            "url": "https://twitter.com/ajlkn"
-        }
-    ],
-    "devDependencies": {
-        "beeper": "^1.1.1",
-        "gscan": "^2.0.0",
-        "gulp": "4.0.0",
-        "gulp-livereload": "4.0.1",
-        "gulp-sass": "^4.0.2",
-        "gulp-sourcemaps": "^2.6.4",
-        "gulp-watch": "5.0.1",
-        "gulp-zip": "4.2.0",
-        "node-sass": "^4.10.0"
-    },
-    "config": {
-        "posts_per_page": 6
-    }
+  "name": "popel",
+  "description": "This is popel (forked from Editorial https://editorial.ghost.io), a news-oriented theme for Ghost.",
+  "demo": "https://aytac.kirmizi.online",
+  "version": "0.3.0",
+  "engines": {
+    "ghost": ">=2.0.0",
+    "ghost-api": "v2"
+  },
+  "license": "MIT",
+  "screenshots": {
+    "desktop": "assets/screenshot-desktop.jpg"
+  },
+  "scripts": {
+    "dev": "gulp",
+    "zip": "gulp zip",
+    "pretest": "gulp build",
+    "test": "gscan .",
+    "preship": "yarn test",
+    "ship": "STATUS=$(git status --porcelain); echo $STATUS; if [ -z \"$STATUS\" ]; then yarn version && git push --follow-tags; fi"
+  },
+  "author": "Ghost Foundation <hello@ghost.org> (https://ghost.org)",
+  "gpm": {
+    "type": "theme",
+    "categories": [
+      "Minimal",
+      "Magazine"
+    ]
+  },
+  "keywords": [
+    "ghost",
+    "theme",
+    "ghost-theme"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spaytac/popel.git"
+  },
+  "bugs": {
+    "url": "https://github.com/spaytac/popel/issues"
+  },
+  "contributors": [
+    "aytac <aytac@kirmizi.online> (https://twitter.com/aytac81)"
+  ],
+  "devDependencies": {
+    "beeper": "^1.1.1",
+    "gscan": "^2.0.0",
+    "gulp": "^4.0.0",
+    "gulp-livereload": "^4.0.1",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-watch": "5.0.1",
+    "gulp-zip": "4.2.0",
+    "node-sass": "^4.10.0"
+  },
+  "config": {
+    "posts_per_page": 6
+  },
+  "homepage": "https://github.com/spaytac/popel#readme",
+  "main": "gulpfile.js",
+  "dependencies": {}
 }

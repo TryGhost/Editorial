@@ -2,28 +2,43 @@
 {{!-- The tag above means: insert everything in this file
 into the {body} of the default.hbs template --}}
 
-
-{{!-- Featured Post --}}
 {{#is "home"}}
-{{#get "posts" filter="featured:true" limit="1" as |featured_post|}}
+{{#get "posts" filter="featured:true" include="tags,authors" limit="1" as |featured_post|}}
     {{#foreach featured_post}}
-        <article id="banner">
-            <div class="content">
-                <header>
-                    <h1><a href="{{url}}">{{title}}</a></h1>
-                    {{#if custom_excerpt}}<p>{{custom_excerpt}}</p>{{/if}}
-                </header>
-                {{content words="42"}}
-                <ul class="actions">
-                    <li><a href="{{url}}" class="button big">Learn More</a></li>
-                </ul>
-            </div>
-            {{#if feature_image}}
-            <a href="{{url}}" class="image object">
-                <img src="{{img_url feature_image}}" alt="{{title}}" />
-            </a>
-            {{/if}}
-        </article>
+            <article name="banner">
+                <div class="content">
+                    <header>
+                        <h1>
+                            <a href="{{url}}">{{title}}</a>
+                        </h1>
+                        <ul class="article-info">
+                            <li><time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time></li>
+                            <li class="reading-time">({{reading_time}})</li>
+                        </ul>
+
+                        {{#if tags}}
+                        <div class="post-tags">
+                            {{#foreach tags}}
+                                <a href="{{url}}">
+                                    <span class="tag-title button">{{name}} </span>
+                                </a>
+                            {{/foreach}}
+                        </div>
+                        {{/if}}
+
+                        {{#if custom_excerpt}}<p>{{custom_excerpt}}</p>{{/if}}
+                    </header>
+                    {{content words="42"}}
+                    <ul class="actions">
+                        <li><a href="{{url}}" class="button big">{{t "Learn More"}}</a></li>
+                    </ul>
+                </div>
+                {{#if feature_image}}
+                <a href="{{url}}" class="image object">
+                    <img src="{{img_url feature_image}}" alt="{{title}}" />
+                </a>
+                {{/if}}
+            </article>
     {{/foreach}}
 {{/get}}
 {{/is}}
@@ -32,7 +47,7 @@ into the {body} of the default.hbs template --}}
 <section>
 
     <header class="major">
-        <h2>Recent posts</h2>
+        <h2>{{t "Recent posts"}}</h2>
     </header>
 
     <section class="posts">
@@ -42,9 +57,24 @@ into the {body} of the default.hbs template --}}
             <a href="{{url}}" class="image fit"><img src="{{img_url feature_image}}" alt="{{title}}" /></a>
             {{/if}}
             <h3><a href="{{url}}">{{title}}</a></h3>
+            <div class="post-meta">
+                <div class="published">
+                    <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
+                </div>
+            </div>
+
+            <div class="post-tags">
+                {{#foreach tags}}
+                    <a href="{{url}}">
+                        <span class="tag-title button">{{name}} </span>
+                    </a>
+                {{/foreach}}
+            </div>
+
             <p>{{excerpt words="33"}}</p>
+
             <ul class="actions special">
-                <li><a href="{{url}}" class="button">Full Story</a></li>
+                <li><a href="{{url}}" class="button">{{t "Full Story"}}</a></li>
             </ul>
         </article>
         {{/foreach}}
@@ -54,4 +84,3 @@ into the {body} of the default.hbs template --}}
 
 {{!-- Pagination --}}
 {{pagination}}
-

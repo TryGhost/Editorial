@@ -45,7 +45,15 @@
 
 			> :last-child {
 				margin-bottom: 0;
-			}
+            }
+
+            h3{
+                margin:0 !important;
+            }
+
+            .post-tags{
+                margin: 0 0 1em 0;
+            }
 
 			.image {
 				display: block;
@@ -55,7 +63,15 @@
 					display: block;
 					width: 100%;
 				}
-			}
+            }
+
+            .post-meta{
+                .published{
+                    .post-date{
+                        font-size: x-small;
+                    }
+                }
+            }
 		}
 
 		@include breakpoint('xlarge-to-max') {

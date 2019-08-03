@@ -6,7 +6,7 @@ into the {body} of the default.hbs template --}}
 {{#author}}
 <header class="author-header">
     {{#if profile_image}}
-        <img class="author-profile-image" src="{{profile_image}}" alt="{{name}}" />
+    <img class="author-profile-image" src="{{profile_image}}" alt="{{name}}" />
     {{/if}}
     <h1><a href="{{url}}">{{name}}</a></h1>
     {{#if bio}}
@@ -45,7 +45,7 @@ into the {body} of the default.hbs template --}}
             <h3><a href="{{url}}">{{title}}</a></h3>
             <p>{{excerpt words="33"}}</p>
             <ul class="actions special">
-                <li><a href="{{url}}" class="button">Full Story</a></li>
+                <li><a href="{{url}}" class="button">{{t "Full Story"}}</a></li>
             </ul>
         </article>
         {{/foreach}}
