@@ -1,8 +1,9 @@
 # Editorial
 
-This is Editorial, a news-oriented design built around a dynamic 'locking' sidebar (try the toggle to see it in action!) and purpose built for content-centric sites. Originally created by [@ajlkn](https://twitter.com/ajlkn) for [HTML5 UP](https://html5up.net) and later ported to [Ghost](https://ghost.org)
+popel is a fork which is based on Editorial, a news-oriented design built around a dynamic 'locking' sidebar (try the toggle to see it in action!) and purpose built for content-centric sites. Originally created by [@ajlkn](https://twitter.com/ajlkn) for [HTML5 UP](https://html5up.net) and later ported to [Ghost](https://ghost.org) by the ghost team.
 
-**Demo: https://editorial.ghost.io**
+**Demo (forked popel): https://aytac.kirmizi.online** 
+**Demo (original editorial): https://editorial.ghost.io**
 
 &nbsp;
 
