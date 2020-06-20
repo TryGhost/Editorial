@@ -9,7 +9,7 @@
         {{!-- Recent posts --}}
         <section>
             <header class="major">
-                <h2>Recent Posts</h2>
+                <h2>{{t "Recent Posts"}}</h2>
             </header>
             <div class="mini-posts">
                 {{!-- We're just grabbing the 3 latest posts here but you can change
@@ -27,7 +27,7 @@
         </section>
 
         {{!-- Contact --}}
-        {{#get "posts" slug="contact"as |contact|}}
+        {{#get "posts" slug="contact" as |contact|}}
             {{#if contact}}{{#foreach contact}}
                 <section>
                     <header class="major">
@@ -40,8 +40,8 @@
 
         {{!-- Footer --}}
         <footer id="footer">
-            <p class="copyright">&copy; {{@site.title}} - All rights reserved<br>
-            Design: <a href="https://html5up.net" target="_blank" rel="noopener">HTML5 UP</a>, Published with <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a></p>
+            <p class="copyright">&copy; {{@site.title}} - {{t "All rights reserved"}}<br>
+            {{t "Design"}}: <a href="https://html5up.net" target="_blank" rel="noopener">HTML5 UP</a>, {{t "Published with"}} <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a></p>
         </footer>
 
     </div>
