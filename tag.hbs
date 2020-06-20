@@ -9,7 +9,7 @@ into the {body} of the default.hbs template --}}
     {{#if description}}
         <p class="content">{{description}}</p>
     {{else}}
-        <p>{{t "A collection of"}} {{plural ../pagination.total empty='(t "posts")' singular='(t "% post")' plural='(t "% posts")'}}</p>
+        <p>{{t "A collection of"}} {{plural ../pagination.total empty=(t "posts") singular=(t "% post") plural=(t "% posts")}}</p>
     {{/if}}
     {{#if feature_image}}
     <a href="{{url}}" class="image main"><img src="{{img_url feature_image}}" alt="{{title}}" /></a>
