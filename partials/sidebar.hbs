@@ -16,7 +16,7 @@
                 this to filter for a specific tag or order depending on what you want.
                 More info: https://docs.ghost.org/api/handlebars-themes/helpers/get/ --}}
                 {{#get "posts" limit="3" as |mini_post|}}
-                    {{#foreach mini_post}}
+                    {{#foreach mini_post visibility="all"}}
                     <article>
                         <h3><a href="{{url}}">{{title}}</a></h3>
                         <p>{{excerpt words="15"}}</p>
