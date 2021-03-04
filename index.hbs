@@ -6,7 +6,7 @@ into the {body} of the default.hbs template --}}
 {{!-- Featured Post --}}
 {{#is "home"}}
 {{#get "posts" filter="featured:true" limit="1" as |featured_post|}}
-    {{#foreach featured_post visibility="all"}}
+    {{#foreach featured_post}}
         <article id="banner">
             <div class="content">
                 <header>
@@ -36,7 +36,7 @@ into the {body} of the default.hbs template --}}
     </header>
 
     <section class="posts">
-        {{#foreach posts visibility="all"}}
+        {{#foreach posts}}
         <article>
             {{#if feature_image}}
             <a href="{{url}}" class="image fit"><img src="{{img_url feature_image}}" alt="{{title}}" /></a>
