@@ -21,7 +21,7 @@ into the {body} of the default.hbs template --}}
 <section>
 
     <section class="posts">
-        {{#foreach posts visibility="all"}}
+        {{#foreach posts}}
         <article>
             {{#if feature_image}}
             <a href="{{url}}" class="image fit"><img src="{{img_url feature_image}}" alt="{{title}}" /></a>
