@@ -8,7 +8,7 @@
 
 	#header {
 		@include vendor('display', 'flex');
-		border-bottom: solid 5px _palette(accent);
+		border-bottom: solid 5px var(--color-primary);
 		padding: 6em 0 1em 0;
 		position: relative;
 

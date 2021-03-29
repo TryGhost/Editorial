@@ -34,16 +34,8 @@
 				text-align: center;
 
 				&.active {
-					background-color: _palette(accent);
+					background-color: var(--color-primary);
 					color: _palette(bg) !important;
-
-					&:hover {
-						background-color: lighten(_palette(accent), 3);
-					}
-
-					&:active {
-						background-color: darken(_palette(accent), 3);
-					}
 				}
 			}
 

@@ -24,7 +24,7 @@
 
 		&.major {
 			> :last-child {
-				border-bottom: solid 3px _palette(accent);
+				border-bottom: solid 3px var(--color-primary);
 				display: inline-block;
 				margin: 0 0 _size(element-margin) 0;
 			 	padding: 0 0.75em 0.5em 0;

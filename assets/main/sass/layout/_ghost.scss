@@ -30,7 +30,7 @@
     }
 
     #sidebar:not(.inactive) .toggle:after {
-        background: #f56a6a;
+        background: var(--color-primary);
     }
 }
 
@@ -142,7 +142,7 @@
 }
 
 .author-box:hover .author-box-name {
-    color: #18bfef;
+    color: var(--color-primary);
     transition: color 0.2s ease;
 }
 

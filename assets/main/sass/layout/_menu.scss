@@ -27,7 +27,7 @@
 				padding: 0.625em 0;
 
 				&:hover {
-					color: _palette(accent);
+					color: var(--color-primary);
 				}
 
 				&.opener {
@@ -49,7 +49,7 @@
 
 					&:hover {
 						&:before {
-							color: _palette(accent);
+							color: var(--color-primary);
 						}
 					}
 
