@@ -78,6 +78,10 @@
 		line-height: 1.3;
 	}
 
+    .has-sans-title h1 {
+        font-family: _font(family);
+    }
+
 	h2 {
 		font-size: 1.75em;
 	}

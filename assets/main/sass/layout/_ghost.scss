@@ -44,6 +44,14 @@
     margin: 0 auto;
 }
 
+.has-serif-body .content > blockquote,
+.has-serif-body .content > ol,
+.has-serif-body .content > ul,
+.has-serif-body .content > dl,
+.has-serif-body .content > p {
+    font-family: _font(family-heading);
+}
+
 // Pagination
 // --------------------------------------------
 

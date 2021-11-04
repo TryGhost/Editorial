@@ -177,3 +177,11 @@
 			}
 		}
 	}
+
+    .has-sans-title article h3 {
+        font-family: _font(family);
+    }
+
+    .has-serif-body article p {
+        font-family: _font(family-heading);
+    }

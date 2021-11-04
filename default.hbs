@@ -18,7 +18,7 @@
     {{ghost_head}}
 
 </head>
-<body class="is-preload {{body_class}}">
+<body class="is-preload {{body_class}}{{#match @custom.title_font "=" "Modern sans-serif"}} has-sans-title{{/match}}{{#match @custom.body_font "=" "Elegant serif"}} has-serif-body{{/match}}">
 
     <div id="wrapper">
         <main id="main">
