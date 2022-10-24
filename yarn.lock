@@ -499,11 +499,11 @@
     debug "^4.3.1"
 
 "@tryghost/debug@^0.1.17", "@tryghost/debug@^0.1.18":
-  version "0.1.18"
-  resolved "https://registry.yarnpkg.com/@tryghost/debug/-/debug-0.1.18.tgz#b126fedb8f409f44c3082a2c469171940cd6986e"
-  integrity sha512-vG9dHuvYn8LlRrWyFUbt4zmsWmPLlZZJn1Qv9ko8uML36nILrpFehTnfda5663cMlwQQWPJ+DL6SCylIbtLWDg==
+  version "0.1.19"
+  resolved "https://registry.yarnpkg.com/@tryghost/debug/-/debug-0.1.19.tgz#8194929559dc3321807142ee6f08691bdd30aa2c"
+  integrity sha512-gwJ3S7dq9fgjcoUU8Dz1co/WwolMcKPKz9xq6MTqgwIYrFhsDrNfdS0+sY7x7Hm75EISN49CQsfrdn39jiZK3g==
   dependencies:
-    "@tryghost/root-utils" "^0.3.16"
+    "@tryghost/root-utils" "^0.3.17"
     debug "^4.3.1"
 
 "@tryghost/elasticsearch@^3.0.2", "@tryghost/elasticsearch@^3.0.4":
@@ -603,7 +603,7 @@
     got "9.6.0"
     lodash "^4.17.21"
 
-"@tryghost/root-utils@^0.3.15", "@tryghost/root-utils@^0.3.16":
+"@tryghost/root-utils@^0.3.15", "@tryghost/root-utils@^0.3.16", "@tryghost/root-utils@^0.3.17":
   version "0.3.17"
   resolved "https://registry.yarnpkg.com/@tryghost/root-utils/-/root-utils-0.3.17.tgz#942dafe7175fc7e930d4d4e2a5de5c4d65bea1d4"
   integrity sha512-mc/UkX6sNBe+Ela4nkYbxA/Vd8GzZpEvF2fAYdJM3KNDQMmUr70SnGoY1gUVeA0rh7xXHiJs1cxo7E/mIHdWvg==
@@ -620,9 +620,9 @@
     "@tryghost/logging" "^2.2.3"
 
 "@tryghost/tpl@^0.1.18":
-  version "0.1.18"
-  resolved "https://registry.yarnpkg.com/@tryghost/tpl/-/tpl-0.1.18.tgz#a4c87e3a82cd75aba72b2325c91d87677cc615f2"
-  integrity sha512-frhPu9ScllYof5Xrhn4FrOluBSOEQiAQP67EOiFV6XE8UKJtAYTB48Xf9XtAWm9IfznpOGuy/2w84nK1SN7lvg==
+  version "0.1.19"
+  resolved "https://registry.yarnpkg.com/@tryghost/tpl/-/tpl-0.1.19.tgz#2f3883554d23d83e31631625c67c91a7eb9d03fb"
+  integrity sha512-0ZOSDx/L75Sai/pea6k9TKnDz8GyyorGR/dtCIKlwd8qJ7oP90XbmTN4PBN+i4oGcZFchf8il9PbzVCoLnG0zA==
   dependencies:
     lodash.template "^4.5.0"
 
@@ -661,9 +661,9 @@
   integrity sha512-jhuKLIRrhvCPLqwPcx6INqmKeiA5EWrsCOPhrlFSrbrmU4ZMPjj5Ul/oLCMDO98XRUIwVm78xICz4EPCektzeQ==
 
 "@types/node@*":
-  version "18.11.0"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-18.11.0.tgz#f38c7139247a1d619f6cc6f27b072606af7c289d"
-  integrity sha512-IOXCvVRToe7e0ny7HpT/X9Rb2RYtElG1a+VshjwT00HxrM2dWBApHQoqsI6WiY7Q03vdf2bCrIGzVrkF/5t10w==
+  version "18.11.4"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-18.11.4.tgz#7017a52e18dfaad32f55eebd539993014441949c"
+  integrity sha512-BxcJpBu8D3kv/GZkx/gSMz6VnTJREBj/4lbzYOQueUOELkt8WrO6zAcSPmp9uRPEW/d+lUO8QK0W2xnS1hEU0A==
 
 "@types/normalize-package-data@^2.4.0":
   version "2.4.1"
@@ -3078,9 +3078,9 @@ is-buffer@^1.1.5:
   integrity sha512-NcdALwpXkTm5Zvvbk7owOUSvVvBKDgKP5/ewfXEznmQFfs4ZRmanOeKBTjRVjka3QFoN6XJ+9F3USqfHqTaU5w==
 
 is-core-module@^2.5.0, is-core-module@^2.9.0:
-  version "2.10.0"
-  resolved "https://registry.yarnpkg.com/is-core-module/-/is-core-module-2.10.0.tgz#9012ede0a91c69587e647514e1d5277019e728ed"
-  integrity sha512-Erxj2n/LDAZ7H8WNJXd9tw38GYM3dv8rk8Zcs+jJuxYTW7sozH+SS8NtrSjVL1/vpLvWi1hxy96IzjJ3EHTJJg==
+  version "2.11.0"
+  resolved "https://registry.yarnpkg.com/is-core-module/-/is-core-module-2.11.0.tgz#ad4cb3e3863e814523c96f3f58d26cc570ff0144"
+  integrity sha512-RRjxlvLDkD1YJwDbroBHMb+cukurkDWNyHx7D3oNB5x9rb5ogcksMC5wHCadcXoo67gVr/+3GFySh3134zi6rw==
   dependencies:
     has "^1.0.3"
 
@@ -3316,9 +3316,9 @@ js-base64@^2.4.9:
   integrity sha512-pZe//GGmwJndub7ZghVHz7vjb2LgC1m8B07Au3eYqeqv9emhESByMXxaEgkUkEqJe87oBbSniGYoQNIBklc7IQ==
 
 js-beautify@^1.13.11:
-  version "1.14.6"
-  resolved "https://registry.yarnpkg.com/js-beautify/-/js-beautify-1.14.6.tgz#b23ca5d74a462c282c7711bb51150bcc97f2b507"
-  integrity sha512-GfofQY5zDp+cuHc+gsEXKPpNw2KbPddreEo35O6jT6i0RVK6LhsoYBhq5TvK4/n74wnA0QbK8gGd+jUZwTMKJw==
+  version "1.14.7"
+  resolved "https://registry.yarnpkg.com/js-beautify/-/js-beautify-1.14.7.tgz#9206296de33f86dc106d3e50a35b7cf8729703b2"
+  integrity sha512-5SOX1KXPFKx+5f6ZrPsIPEY7NwKeQz47n3jm2i+XeHx9MoRsfQenlOP13FQhWvg8JRS0+XLO6XYUQ2GX+q+T9A==
   dependencies:
     config-chain "^1.1.13"
     editorconfig "^0.15.3"
@@ -5574,9 +5574,9 @@ typedarray@^0.0.6:
   integrity sha512-/aCDEGatGvZ2BIk+HmLf4ifCJFwvKFNb9/JeZPMulfgFracn9QFcAf5GO8B/mweUjSoblS5In0cWhqpfs/5PQA==
 
 uglify-js@^3.1.4:
-  version "3.17.3"
-  resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-3.17.3.tgz#f0feedf019c4510f164099e8d7e72ff2d7304377"
-  integrity sha512-JmMFDME3iufZnBpyKL+uS78LRiC+mK55zWfM5f/pWBJfpOttXAqYfdDGRukYhJuyRinvPVAtUhvy7rlDybNtFg==
+  version "3.17.4"
+  resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-3.17.4.tgz#61678cf5fa3f5b7eb789bb345df29afb8257c22c"
+  integrity sha512-T9q82TJI9e/C1TAxYvfb16xO120tMVFZrGA3f9/P4424DNu6ypK103y0GPFVa17yotwSyZW5iYXgjYHkGrJW/g==
 
 unc-path-regex@^0.1.2:
   version "0.1.2"
