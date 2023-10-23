@@ -4668,9 +4668,9 @@ nanomatch@^1.2.9:
     to-regex "^3.0.1"
 
 nconf@^0.12.0:
-  version "0.12.0"
-  resolved "https://registry.yarnpkg.com/nconf/-/nconf-0.12.0.tgz#9cf70757aae4d440d43ed53c42f87da18471b8bf"
-  integrity sha512-T3fZPw3c7Dfrz8JBQEbEcZJ2s8f7cUMpKuyBtsGQe0b71pcXx6gNh4oti2xh5dxB+gO9ufNfISBlGvvWtfyMcA==
+  version "0.12.1"
+  resolved "https://registry.yarnpkg.com/nconf/-/nconf-0.12.1.tgz#b0b91d2e32dc588fad19ac8bc5245e7472ebb4b9"
+  integrity sha512-p2cfF+B3XXacQdswUYWZ0w6Vld0832A/tuqjLBu3H1sfUcby4N2oVbGhyuCkZv+t3iY3aiFEj7gZGqax9Q2c1w==
   dependencies:
     async "^3.0.0"
     ini "^2.0.0"
