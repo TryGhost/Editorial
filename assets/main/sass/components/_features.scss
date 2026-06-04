@@ -1,3 +1,7 @@
+@use "../libs/breakpoints";
+@use "../libs/functions";
+@use "../libs/vendor";
+
 ///
 /// Editorial by HTML5 UP
 /// html5up.net | @ajlkn
@@ -7,16 +11,16 @@
 /* Features */
 
 	.features {
-		$gutter: _size(gutter);
+		$gutter: functions.size(gutter);
 
-		@include vendor('display', 'flex');
-		@include vendor('flex-wrap', 'wrap');
-		margin: 0 0 _size(element-margin) ($gutter * -1);
+		@include vendor.vendor('display', 'flex');
+		@include vendor.vendor('flex-wrap', 'wrap');
+		margin: 0 0 functions.size(element-margin) ($gutter * -1);
 		width: calc(100% + #{$gutter});
 
 		article {
-			@include vendor('align-items', 'center');
-			@include vendor('display', 'flex');
+			@include vendor.vendor('align-items', 'center');
+			@include vendor.vendor('display', 'flex');
 			margin: 0 0 $gutter $gutter;
 			position: relative;
 			width: calc(50% - #{$gutter});
@@ -35,12 +39,12 @@
 			}
 
 			.icon {
-				@include vendor('flex-grow', '0');
-				@include vendor('flex-shrink', '0');
+				@include vendor.vendor('flex-grow', '0');
+				@include vendor.vendor('flex-shrink', '0');
 				display: block;
 				height: 10em;
 				line-height: 10em;
-				margin: 0 _size(element-margin) 0 0;
+				margin: 0 functions.size(element-margin) 0 0;
 				text-align: center;
 				width: 10em;
 
@@ -52,9 +56,9 @@
 				}
 
 				&:after {
-					@include vendor('transform', 'rotate(45deg)');
+					@include vendor.vendor('transform', 'rotate(45deg)');
 					border-radius: 0.25rem;
-					border: solid 2px _palette(border);
+					border: solid 2px functions.palette(border);
 					content: '';
 					display: block;
 					height: 7em;
@@ -67,8 +71,8 @@
 			}
 
 			.content {
-				@include vendor('flex-grow', '1');
-				@include vendor('flex-shrink', '1');
+				@include vendor.vendor('flex-grow', '1');
+				@include vendor.vendor('flex-shrink', '1');
 				width: 100%;
 
 				> :last-child {
@@ -77,8 +81,8 @@
 			}
 		}
 
-		@include breakpoint('<=medium') {
-			margin: 0 0 _size(element-margin) 0;
+		@include breakpoints.breakpoint('<=medium') {
+			margin: 0 0 functions.size(element-margin) 0;
 			width: 100%;
 
 			article {
@@ -120,15 +124,15 @@
 			}
 		}
 
-		@include breakpoint('<=xsmall') {
+		@include breakpoints.breakpoint('<=xsmall') {
 			article {
-				@include vendor('flex-direction', 'column');
-				@include vendor('align-items', 'flex-start');
+				@include vendor.vendor('flex-direction', 'column');
+				@include vendor.vendor('align-items', 'flex-start');
 
 				.icon {
 					height: 6em;
 					line-height: 6em;
-					margin: 0 0 (_size(element-margin) * 0.75) 0;
+					margin: 0 0 (functions.size(element-margin) * 0.75) 0;
 					width: 6em;
 
 					&:before {
@@ -144,7 +148,7 @@
 			}
 		}
 
-		@include breakpoint('<=xsmall') {
+		@include breakpoints.breakpoint('<=xsmall') {
 			article {
 				.icon {
 					&:before {

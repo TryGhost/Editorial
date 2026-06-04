@@ -1,3 +1,7 @@
+@use "sass:math";
+@use "../libs/functions";
+@use "../libs/mixins";
+
 ///
 /// Editorial by HTML5 UP
 /// html5up.net | @ajlkn
@@ -6,13 +10,13 @@
 
 /* Contact */
 
-	ul.contact {
+ul.contact {
 		list-style: none;
 		padding: 0;
 
 		li {
-			@include icon;
-			border-top: solid 1px _palette(border);
+			@include mixins.icon;
+			border-top: solid 1px functions.palette(border);
 			margin: 1.5em 0 0 0;
 			padding: 1.5em 0 0 3em;
 			position: relative;
@@ -26,7 +30,7 @@
 				line-height: 1.125em;
 				position: absolute;
 				text-align: center;
-				top: (1.5em / 1.5);
+				top: math.div(1.5em, 1.5);
 				width: 1.5em;
 			}
 

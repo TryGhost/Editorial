@@ -1,3 +1,5 @@
+@use "../libs/functions";
+
 ///
 /// Editorial by HTML5 UP
 /// html5up.net | @ajlkn
@@ -8,13 +10,13 @@
 
 	.mini-posts {
 		article {
-			border-top: solid 1px _palette(border);
-			margin-top: _size(element-margin);
-			padding-top: _size(element-margin);
+			border-top: solid 1px functions.palette(border);
+			margin-top: functions.size(element-margin);
+			padding-top: functions.size(element-margin);
 
 			.image {
 				display: block;
-				margin: 0 0 (_size(element-margin) * 0.75) 0;
+				margin: 0 0 (functions.size(element-margin) * 0.75) 0;
 
 				img {
 					display: block;
