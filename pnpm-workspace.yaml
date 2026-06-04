@@ -1,0 +1,11 @@
+# pnpm v11 requires each dependency build script to be explicitly approved.
+allowBuilds:
+  # The SaSS compiler the gulp build uses to compile the theme's CSS; its
+  # postinstall fetches/compiles the native binding, so the build needs it.
+  node-sass: true
+  # Native file-watching backend used by `gulp dev` (watch) on macOS; optional elsewhere.
+  fsevents: true
+  # Optional dtrace bindings for bunyan (a gscan dependency); not needed to build/test the theme.
+  dtrace-provider: false
+  # Postinstall only prints a donation banner; nothing to build.
+  es5-ext: false
