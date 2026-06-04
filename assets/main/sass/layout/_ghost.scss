@@ -1,3 +1,6 @@
+@use "../libs/breakpoints";
+@use "../libs/functions";
+
 // Main
 // --------------------------------------------
 
@@ -12,7 +15,7 @@
     display: inline-flex;
     height: 28px;
 
-    @include breakpoint('<=small') {
+    @include breakpoints.breakpoint('<=small') {
         display: flex;
         justify-content: center;
         text-align: center;
@@ -24,7 +27,7 @@
     transform: none !important;
 }
 
-@include breakpoint('<=small') {
+@include breakpoints.breakpoint('<=small') {
     #sidebar:not(.inactive) .toggle:before {
         color: #fff;
     }
@@ -49,7 +52,7 @@
 .has-serif-body .content > ul,
 .has-serif-body .content > dl,
 .has-serif-body .content > p {
-    font-family: _font(family-heading);
+    font-family: functions.font(family-heading);
 }
 
 // Pagination
@@ -166,7 +169,7 @@
 }
 
 .author-box-label {
-    font-family: _font(family-heading);
+    font-family: functions.font(family-heading);
     font-size: 0.7rem;
     line-height: 1em;
     font-weight: 300;
@@ -227,17 +230,17 @@ figcaption {
     margin-right: -6rem;
     width: calc(100% + 12rem);
 
-    @include breakpoint('<=large') {
+    @include breakpoints.breakpoint('<=large') {
         margin-left: -4rem;
         margin-right: -4rem;
         width: calc(100% + 8rem);
     }
-    @include breakpoint('<=medium') {
+    @include breakpoints.breakpoint('<=medium') {
         margin-left: -2rem;
         margin-right: -2rem;
         width: calc(100% + 4rem);
     }
-    @include breakpoint('<=small') {
+    @include breakpoints.breakpoint('<=small') {
         margin-left: 0;
         margin-right: 0;
         width: 100%;
@@ -250,17 +253,17 @@ figcaption {
     margin-right: -14.1rem;
     width: calc(100% + 28.25rem);
 
-    @include breakpoint('<=large') {
+    @include breakpoints.breakpoint('<=large') {
         margin-left: -8rem;
         margin-right: -8rem;
         width: calc(100% + 16rem);
     }
-    @include breakpoint('<=medium') {
+    @include breakpoints.breakpoint('<=medium') {
         margin-left: -4rem;
         margin-right: -4rem;
         width: calc(100% + 8rem);
     }
-    @include breakpoint('<=small') {
+    @include breakpoints.breakpoint('<=small') {
         margin-left: -2rem;
         margin-right: -2rem;
         width: calc(100% + 4rem);
@@ -274,17 +277,17 @@ figcaption {
     margin-right: -6rem;
     width: calc(100% + 12rem);
 
-    @include breakpoint('<=large') {
+    @include breakpoints.breakpoint('<=large') {
         margin-left: -4rem;
         margin-right: -4rem;
         width: calc(100% + 8rem);
     }
-    @include breakpoint('<=medium') {
+    @include breakpoints.breakpoint('<=medium') {
         margin-left: -2rem;
         margin-right: -2rem;
         width: calc(100% + 4rem);
     }
-    @include breakpoint('<=small') {
+    @include breakpoints.breakpoint('<=small') {
         margin-left: 0;
         margin-right: 0;
         width: 100%;
@@ -332,7 +335,7 @@ figcaption {
     border-radius: .375em;
     box-sizing: border-box;
 
-    @include breakpoint('<=xsmall') {
+    @include breakpoints.breakpoint('<=xsmall') {
         flex-direction: column;
     }
 }
@@ -349,7 +352,7 @@ figcaption {
     justify-content: start;
     padding: 1.2rem;
 
-    @include breakpoint('<=xsmall') {
+    @include breakpoints.breakpoint('<=xsmall') {
         order: 2;
     }
 }
@@ -383,7 +386,7 @@ figcaption {
     max-height: 100%;
     margin: -1px -1px -1px 0;
 
-    @include breakpoint('<=xsmall') {
+    @include breakpoints.breakpoint('<=xsmall') {
         order: 1;
         min-height: 10.6rem;
         margin: -1px -1px 0px -1px;
@@ -399,7 +402,7 @@ figcaption {
     object-fit: cover;
     border-radius: 0 .375em .375em 0;
 
-    @include breakpoint('<=xsmall') {
+    @include breakpoints.breakpoint('<=xsmall') {
         border-radius: .375em .375em 0 0;
     }
 }

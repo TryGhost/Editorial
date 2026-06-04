@@ -1,3 +1,5 @@
+@use "../libs/functions";
+
 ///
 /// Editorial by HTML5 UP
 /// html5up.net | @ajlkn
@@ -8,7 +10,7 @@
 
 	#footer {
 		.copyright {
-			color: _palette(fg-light);
+			color: functions.palette(fg-light);
 			font-size: 0.9em;
 
 			a {

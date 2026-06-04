@@ -1,3 +1,8 @@
+@use "../libs/breakpoints";
+@use "../libs/functions";
+@use "../libs/mixins";
+@use "../libs/vendor";
+
 ///
 /// Editorial by HTML5 UP
 /// html5up.net | @ajlkn
@@ -7,18 +12,18 @@
 /* Main */
 
 	#main {
-		@include vendor('flex-grow', '1');
-		@include vendor('flex-shrink', '1');
+		@include vendor.vendor('flex-grow', '1');
+		@include vendor.vendor('flex-shrink', '1');
 		width: 100%;
 
 		> .inner {
-			@include padding(0, 6em);
+			@include mixins.padding(0, 6em);
 			margin: 0 auto;
 			max-width: 110em;
 
 			> section {
-				@include padding(6em, 0);
-				border-top: solid 2px _palette(border);
+				@include mixins.padding(6em, 0);
+				border-top: solid 2px functions.palette(border);
 
 				&:first-of-type {
 				 	border-top: 0 !important;
@@ -26,32 +31,32 @@
 			}
 		}
 
-		@include breakpoint('<=xlarge') {
+		@include breakpoints.breakpoint('<=xlarge') {
 			> .inner {
-				@include padding(0, 5em);
+				@include mixins.padding(0, 5em);
 
 				> section {
-					@include padding(5em, 0);
+					@include mixins.padding(5em, 0);
 				}
 			}
 		}
 
-		@include breakpoint('<=large') {
+		@include breakpoints.breakpoint('<=large') {
 			> .inner {
-				@include padding(0, 4em);
+				@include mixins.padding(0, 4em);
 
 				> section {
-					@include padding(4em, 0);
+					@include mixins.padding(4em, 0);
 				}
 			}
 		}
 
-		@include breakpoint('<=small') {
+		@include breakpoints.breakpoint('<=small') {
 			> .inner {
-				@include padding(0, 2em);
+				@include mixins.padding(0, 2em);
 
 				> section {
-					@include padding(3em, 0);
+					@include mixins.padding(3em, 0);
 				}
 			}
 		}

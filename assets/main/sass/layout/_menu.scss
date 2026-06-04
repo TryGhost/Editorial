@@ -1,3 +1,7 @@
+@use "../libs/functions";
+@use "../libs/mixins";
+@use "../libs/vendor";
+
 ///
 /// Editorial by HTML5 UP
 /// html5up.net | @ajlkn
@@ -8,11 +12,11 @@
 
 	#menu {
 		ul {
-			@include vendor('user-select', 'none');
-			color: _palette(fg-bold);
-			font-family: _font(family-heading);
-			font-family: _font(weight-heading-alt);
-			letter-spacing: _font(kerning-heading);
+			@include vendor.vendor('user-select', 'none');
+			color: functions.palette(fg-bold);
+			font-family: functions.font(family-heading);
+			font-family: functions.font(weight-heading-alt);
+			letter-spacing: functions.font(kerning-heading);
 			list-style: none;
 			margin-bottom: 0;
 			padding: 0;
@@ -31,17 +35,17 @@
 				}
 
 				&.opener {
-					@include vendor('transition', 'color #{_duration(transition)} ease-in-out');
-					@include icon;
+					@include vendor.vendor('transition', 'color #{functions.duration(transition)} ease-in-out');
+					@include mixins.icon;
 					-webkit-tap-highlight-color: rgba(255,255,255,0);
 					position: relative;
 
 					&:before {
-						@include vendor('transition', (
-							'color #{_duration(transition)} ease-in-out',
-							'transform #{_duration(transition)} ease-in-out'
+						@include vendor.vendor('transition', (
+							'color #{functions.duration(transition)} ease-in-out',
+							'transform #{functions.duration(transition)} ease-in-out'
 						));
-						color: _palette(fg-light);
+						color: functions.palette(fg-light);
 						content: '\f078';
 						position: absolute;
 						right: 0;
@@ -59,7 +63,7 @@
 						}
 
 						&:before {
-							@include vendor('transform', 'rotate(-180deg)');
+							@include vendor.vendor('transform', 'rotate(-180deg)');
 						}
 					}
 				}
@@ -68,12 +72,12 @@
 
 		> ul {
 			> li {
-				border-top: solid 1px _palette(border);
+				border-top: solid 1px functions.palette(border);
 				margin: 0.5em 0 0 0;
 				padding: 0.5em 0 0 0;
 
 				> ul {
-					color: _palette(fg-light);
+					color: functions.palette(fg-light);
 					display: none;
 					margin: 0.5em 0 1.5em 0;
 					padding-left: 1em;

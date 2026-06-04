@@ -1,3 +1,7 @@
+@use "../libs/functions";
+@use "../libs/mixins";
+@use "../libs/vendor";
+
 ///
 /// Editorial by HTML5 UP
 /// html5up.net | @ajlkn
@@ -7,15 +11,15 @@
 /* Form */
 
 	form {
-		margin: 0 0 _size(element-margin) 0;
+		margin: 0 0 functions.size(element-margin) 0;
 	}
 
 	label {
-		color: _palette(fg-bold);
+		color: functions.palette(fg-bold);
 		display: block;
 		font-size: 0.9em;
-		font-weight: _font(weight-bold);
-		margin: 0 0 (_size(element-margin) * 0.5) 0;
+		font-weight: functions.font(weight-bold);
+		margin: 0 0 (functions.size(element-margin) * 0.5) 0;
 	}
 
 	input[type="text"],
@@ -26,11 +30,11 @@
 	input[type="url"],
 	select,
 	textarea {
-		@include vendor('appearance', 'none');
-		background: _palette(bg);
-		border-radius: _size(border-radius);
+		@include vendor.vendor('appearance', 'none');
+		background: functions.palette(bg);
+		border-radius: functions.size(border-radius);
 		border: none;
-		border: solid 1px _palette(border);
+		border: solid 1px functions.palette(border);
 		color: inherit;
 		display: block;
 		outline: 0;
@@ -49,17 +53,17 @@
 	}
 
 	select {
-		background-image: svg-url("<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40' preserveAspectRatio='none' viewBox='0 0 40 40'><path d='M9.4,12.3l10.4,10.4l10.4-10.4c0.2-0.2,0.5-0.4,0.9-0.4c0.3,0,0.6,0.1,0.9,0.4l3.3,3.3c0.2,0.2,0.4,0.5,0.4,0.9 c0,0.4-0.1,0.6-0.4,0.9L20.7,31.9c-0.2,0.2-0.5,0.4-0.9,0.4c-0.3,0-0.6-0.1-0.9-0.4L4.3,17.3c-0.2-0.2-0.4-0.5-0.4-0.9 c0-0.4,0.1-0.6,0.4-0.9l3.3-3.3c0.2-0.2,0.5-0.4,0.9-0.4S9.1,12.1,9.4,12.3z' fill='#{_palette(border)}' /></svg>");
+		background-image: mixins.svg-url("<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40' preserveAspectRatio='none' viewBox='0 0 40 40'><path d='M9.4,12.3l10.4,10.4l10.4-10.4c0.2-0.2,0.5-0.4,0.9-0.4c0.3,0,0.6,0.1,0.9,0.4l3.3,3.3c0.2,0.2,0.4,0.5,0.4,0.9 c0,0.4-0.1,0.6-0.4,0.9L20.7,31.9c-0.2,0.2-0.5,0.4-0.9,0.4c-0.3,0-0.6-0.1-0.9-0.4L4.3,17.3c-0.2-0.2-0.4-0.5-0.4-0.9 c0-0.4,0.1-0.6,0.4-0.9l3.3-3.3c0.2-0.2,0.5-0.4,0.9-0.4S9.1,12.1,9.4,12.3z' fill='#{functions.palette(border)}' /></svg>");
 		background-size: 1.25em;
 		background-repeat: no-repeat;
 		background-position: calc(100% - 1em) center;
-		height: _size(element-height);
-		padding-right: _size(element-height);
+		height: functions.size(element-height);
+		padding-right: functions.size(element-height);
 		text-overflow: ellipsis;
 
 		option {
-			color: _palette(fg-bold);
-			background: _palette(bg);
+			color: functions.palette(fg-bold);
+			background: functions.palette(bg);
 		}
 
 		&:focus {
@@ -80,7 +84,7 @@
 	input[type="search"],
 	input[type="url"],
 	select {
-		height: _size(element-height);
+		height: functions.size(element-height);
 	}
 
 	textarea {
@@ -89,7 +93,7 @@
 
 	input[type="checkbox"],
 	input[type="radio"], {
-		@include vendor('appearance', 'none');
+		@include vendor.vendor('appearance', 'none');
 		display: block;
 		float: left;
 		margin-right: -2em;
@@ -98,37 +102,37 @@
 		z-index: -1;
 
 		& + label {
-			@include icon;
-			color: _palette(fg);
+			@include mixins.icon;
+			color: functions.palette(fg);
 			cursor: pointer;
 			display: inline-block;
 			font-size: 1em;
-			font-weight: _font(weight);
-			padding-left: (_size(element-height) * 0.6) + 0.75em;
+			font-weight: functions.font(weight);
+			padding-left: (functions.size(element-height) * 0.6) + 0.75em;
 			padding-right: 0.75em;
 			position: relative;
 
 			&:before {
-				background: _palette(bg);
-				border-radius: _size(border-radius);
-				border: solid 1px _palette(border);
+				background: functions.palette(bg);
+				border-radius: functions.size(border-radius);
+				border: solid 1px functions.palette(border);
 				content: '';
 				display: inline-block;
-				height: (_size(element-height) * 0.6);
+				height: (functions.size(element-height) * 0.6);
 				left: 0;
-				line-height: (_size(element-height) * 0.575);
+				line-height: (functions.size(element-height) * 0.575);
 				position: absolute;
 				text-align: center;
 				top: 0;
-				width: (_size(element-height) * 0.6);
+				width: (functions.size(element-height) * 0.6);
 			}
 		}
 
 		&:checked + label {
 			&:before {
-				background: _palette(fg-bold);
-				border-color: _palette(fg-bold);
-				color: _palette(bg);
+				background: functions.palette(fg-bold);
+				border-color: functions.palette(fg-bold);
+				color: functions.palette(bg);
 				content: '\f00c';
 			}
 		}
@@ -144,7 +148,7 @@
 	input[type="checkbox"] {
 		& + label {
 			&:before {
-				border-radius: _size(border-radius);
+				border-radius: functions.size(border-radius);
 			}
 		}
 	}
@@ -158,21 +162,21 @@
 	}
 
 	::-webkit-input-placeholder {
-		color: _palette(fg-light) !important;
+		color: functions.palette(fg-light) !important;
 		opacity: 1.0;
 	}
 
 	:-moz-placeholder {
-		color: _palette(fg-light) !important;
+		color: functions.palette(fg-light) !important;
 		opacity: 1.0;
 	}
 
 	::-moz-placeholder {
-		color: _palette(fg-light) !important;
+		color: functions.palette(fg-light) !important;
 		opacity: 1.0;
 	}
 
 	:-ms-input-placeholder {
-		color: _palette(fg-light) !important;
+		color: functions.palette(fg-light) !important;
 		opacity: 1.0;
 	}

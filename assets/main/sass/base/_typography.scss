@@ -1,3 +1,7 @@
+@use "../libs/breakpoints";
+@use "../libs/functions";
+@use "../libs/vendor";
+
 ///
 /// Editorial by HTML5 UP
 /// html5up.net | @ajlkn
@@ -7,29 +11,29 @@
 /* Type */
 
 	body, input, select, textarea {
-		color: _palette(fg);
-		font-family: _font(family);
+		color: functions.palette(fg);
+		font-family: functions.font(family);
 		font-size: 13pt;
-		font-weight: _font(weight);
+		font-weight: functions.font(weight);
 		line-height: 1.65;
 
-		@include breakpoint('<=xlarge') {
+		@include breakpoints.breakpoint('<=xlarge') {
 			font-size: 11pt;
 		}
 
-		@include breakpoint('<=large') {
+		@include breakpoints.breakpoint('<=large') {
 			font-size: 10pt;
 		}
 
-		@include breakpoint('<=xxsmall') {
+		@include breakpoints.breakpoint('<=xxsmall') {
 			font-size: 9pt;
 		}
 	}
 
 	a {
-		@include vendor('transition', (
-			'color #{_duration(transition)} ease-in-out',
-			'border-bottom-color #{_duration(transition)} ease-in-out'
+		@include vendor.vendor('transition', (
+			'color #{functions.duration(transition)} ease-in-out',
+			'border-bottom-color #{functions.duration(transition)} ease-in-out'
 		));
 		border-bottom: dotted 1px;
 		color: var(--color-primary);
@@ -46,8 +50,8 @@
 	}
 
 	strong, b {
-		color: _palette(fg-bold);
-		font-weight: _font(weight-bold);
+		color: functions.palette(fg-bold);
+		font-weight: functions.font(weight-bold);
 	}
 
 	em, i {
@@ -55,15 +59,15 @@
 	}
 
 	p {
-		margin: 0 0 _size(element-margin) 0;
+		margin: 0 0 functions.size(element-margin) 0;
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: _palette(fg-bold);
-		font-family: _font(family-heading);
-		font-weight: _font(weight-heading);
+		color: functions.palette(fg-bold);
+		font-family: functions.font(family-heading);
+		font-weight: functions.font(weight-heading);
 		line-height: 1.5;
-		margin: 0 0 (_size(element-margin) * 0.5) 0;
+		margin: 0 0 (functions.size(element-margin) * 0.5) 0;
 
 		a {
 			color: inherit;
@@ -74,12 +78,12 @@
 
 	h1 {
 		font-size: 4em;
-		margin: 0 0 (_size(element-margin) * 0.25) 0;
+		margin: 0 0 (functions.size(element-margin) * 0.25) 0;
 		line-height: 1.3;
 	}
 
     .has-sans-title h1 {
-        font-family: _font(family);
+        font-family: functions.font(family);
     }
 
 	h2 {
@@ -102,19 +106,19 @@
 		font-size: 0.7em;
 	}
 
-	@include breakpoint('<=xlarge') {
+	@include breakpoints.breakpoint('<=xlarge') {
 		h1 {
 			font-size: 3.5em;
 		}
 	}
 
-	@include breakpoint('<=medium') {
+	@include breakpoints.breakpoint('<=medium') {
 		h1 {
 			font-size: 3.25em;
 		}
 	}
 
-	@include breakpoint('<=small') {
+	@include breakpoints.breakpoint('<=small') {
 		h1 {
 			font-size: 2em;
 			line-height: 1.4;
@@ -138,17 +142,17 @@
 	}
 
 	blockquote {
-		border-left: solid 3px _palette(border);
+		border-left: solid 3px functions.palette(border);
 		font-style: italic;
-		margin: 0 0 _size(element-margin) 0;
-		padding: (_size(element-margin) / 4) 0 (_size(element-margin) / 4) _size(element-margin);
+		margin: 0 0 functions.size(element-margin) 0;
+		padding: (functions.size(element-margin) * 0.25) 0 (functions.size(element-margin) * 0.25) functions.size(element-margin);
 	}
 
 	code {
-		background: _palette(border-bg);
-		border-radius: _size(border-radius);
-		border: solid 1px _palette(border);
-		font-family: _font(family-fixed);
+		background: functions.palette(border-bg);
+		border-radius: functions.size(border-radius);
+		border: solid 1px functions.palette(border);
+		font-family: functions.font(family-fixed);
 		font-size: 0.9em;
 		margin: 0 0.25em;
 		padding: 0.25em 0.65em;
@@ -156,9 +160,9 @@
 
 	pre {
 		-webkit-overflow-scrolling: touch;
-		font-family: _font(family-fixed);
+		font-family: functions.font(family-fixed);
 		font-size: 0.9em;
-		margin: 0 0 _size(element-margin) 0;
+		margin: 0 0 functions.size(element-margin) 0;
 
 		code {
 			display: block;
@@ -170,11 +174,11 @@
 
 	hr {
 		border: 0;
-		border-bottom: solid 1px _palette(border);
-		margin: _size(element-margin) 0;
+		border-bottom: solid 1px functions.palette(border);
+		margin: functions.size(element-margin) 0;
 
 		&.major {
-			margin: (_size(element-margin) * 1.5) 0;
+			margin: (functions.size(element-margin) * 1.5) 0;
 		}
 	}
 

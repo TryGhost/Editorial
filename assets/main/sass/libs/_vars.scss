@@ -1,3 +1,4 @@
+@use "sass:color";
 // Misc.
 	$misc: (
 		z-index-base:		10000
@@ -39,6 +40,6 @@
 		fg-bold:			#3d4449,
 		fg-light:			#9fa3a6,
 		border:				rgba(210,215,217,0.75),
-		border-bg:			transparentize(#e6ebed, 0.75),
+		border-bg:			color.adjust(#e6ebed, $alpha: -0.75),
 		accent:				#f56a6a
 	);

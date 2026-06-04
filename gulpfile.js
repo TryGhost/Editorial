@@ -3,7 +3,7 @@ const pump = require('pump');
 
 // gulp plugins and utils
 const livereload = require('gulp-livereload');
-const sass = require('gulp-sass')(require('node-sass'));
+const sass = require('gulp-sass')(require('sass'));
 const zip = require('gulp-zip').default;
 const beeper = require('beeper');
 
@@ -31,7 +31,7 @@ function hbs(done) {
 function css(done) {
     pump([
         src('./assets/main/sass/*.scss', {sourcemaps: true}),
-        sass({outputStyle: 'compressed'}).on('error', sass.logError),
+        sass({style: 'compressed'}).on('error', sass.logError),
         dest('assets/main/css', {sourcemaps: './'}),
         livereload()
     ], handleError(done));

@@ -1,9 +1,10 @@
-@import 'libs/vars';
-@import 'libs/functions';
-@import 'libs/mixins';
-@import 'libs/vendor';
-@import 'libs/breakpoints';
-@import 'libs/html-grid';
+@use "sass:meta";
+@use 'libs/vars';
+@use 'libs/functions';
+@use 'libs/mixins';
+@use 'libs/vendor';
+@use 'libs/breakpoints';
+@use 'libs/html-grid';
 @import 'font-awesome.min.css';
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,400italic,600italic|Roboto+Slab:400,700');
 
@@ -15,7 +16,7 @@
 
 // Breakpoints.
 
-	@include breakpoints((
+	@include breakpoints.breakpoints((
 		xlarge:   ( 1281px,  1680px ),
 		large:    ( 981px,   1280px ),
 		medium:   ( 737px,   980px  ),
@@ -28,36 +29,36 @@
 
 // Base.
 
-	@import 'base/reset';
-	@import 'base/page';
-	@import 'base/typography';
+	@include meta.load-css('base/reset');
+	@include meta.load-css('base/page');
+	@include meta.load-css('base/typography');
 
 // Component.
 
-	@import 'components/row';
-	@import 'components/section';
-	@import 'components/form';
-	@import 'components/box';
-	@import 'components/icon';
-	@import 'components/image';
-	@import 'components/list';
-	@import 'components/actions';
-	@import 'components/icons';
-	@import 'components/contact';
-	@import 'components/pagination';
-	@import 'components/table';
-	@import 'components/button';
-	@import 'components/mini-posts';
-	@import 'components/features';
-	@import 'components/posts';
+	@include meta.load-css('components/row');
+	@include meta.load-css('components/section');
+	@include meta.load-css('components/form');
+	@include meta.load-css('components/box');
+	@include meta.load-css('components/icon');
+	@include meta.load-css('components/image');
+	@include meta.load-css('components/list');
+	@include meta.load-css('components/actions');
+	@include meta.load-css('components/icons');
+	@include meta.load-css('components/contact');
+	@include meta.load-css('components/pagination');
+	@include meta.load-css('components/table');
+	@include meta.load-css('components/button');
+	@include meta.load-css('components/mini-posts');
+	@include meta.load-css('components/features');
+	@include meta.load-css('components/posts');
 
 // Layout.
 
-	@import 'layout/wrapper';
-	@import 'layout/main';
-	@import 'layout/sidebar';
-	@import 'layout/header';
-	@import 'layout/banner';
-	@import 'layout/footer';
-    @import 'layout/menu';
-    @import 'layout/ghost';
+	@include meta.load-css('layout/wrapper');
+	@include meta.load-css('layout/main');
+	@include meta.load-css('layout/sidebar');
+	@include meta.load-css('layout/header');
+	@include meta.load-css('layout/banner');
+	@include meta.load-css('layout/footer');
+    @include meta.load-css('layout/menu');
+    @include meta.load-css('layout/ghost');

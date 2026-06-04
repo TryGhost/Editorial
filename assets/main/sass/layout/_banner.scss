@@ -1,3 +1,8 @@
+@use "../libs/breakpoints";
+@use "../libs/functions";
+@use "../libs/mixins";
+@use "../libs/vendor";
+
 ///
 /// Editorial by HTML5 UP
 /// html5up.net | @ajlkn
@@ -7,24 +12,24 @@
 /* Banner */
 
 	#banner {
-		@include padding(6em, 0);
-		@include vendor('display', 'flex');
+		@include mixins.padding(6em, 0);
+		@include vendor.vendor('display', 'flex');
 
 		h1 {
 			margin-top: -0.125em;
 		}
 
 		.content {
-			@include vendor('flex-grow', '1');
-			@include vendor('flex-shrink', '1');
+			@include vendor.vendor('flex-grow', '1');
+			@include vendor.vendor('flex-shrink', '1');
 			width: 50%;
 		}
 
 		.image {
-			@include vendor('flex-grow', '0');
-			@include vendor('flex-shrink', '0');
+			@include vendor.vendor('flex-grow', '0');
+			@include vendor.vendor('flex-shrink', '0');
 			display: block;
-			margin: 0 0 _size(element-margin) (_size(element-margin) * 2);
+			margin: 0 0 functions.size(element-margin) (functions.size(element-margin) * 2);
 			width: 50%;
 
 			img {
@@ -41,8 +46,8 @@
 			}
 		}
 
-		@include orientation(portrait) {
-			@include vendor('flex-direction', 'column-reverse');
+		@include breakpoints.orientation(portrait) {
+			@include vendor.vendor('flex-direction', 'column-reverse');
 
 			h1 {
 				br {
@@ -51,22 +56,22 @@
 			}
 
 			.content {
-				@include vendor('flex-grow', '0');
-				@include vendor('flex-shrink', '0');
+				@include vendor.vendor('flex-grow', '0');
+				@include vendor.vendor('flex-shrink', '0');
 				width: 100%;
 			}
 
 			.image {
-				@include vendor('flex-grow', '0');
-				@include vendor('flex-shrink', '0');
-				margin: 0 0 (_size(element-margin) * 2) 0;
+				@include vendor.vendor('flex-grow', '0');
+				@include vendor.vendor('flex-shrink', '0');
+				margin: 0 0 (functions.size(element-margin) * 2) 0;
 				height: 25em;
 				max-height: 50vh;
 				min-height: 18em;
 				width: 100%;
 			}
 
-			@include breakpoint('<=xsmall') {
+			@include breakpoints.breakpoint('<=xsmall') {
 				.image {
 					max-height: 35vh;
 				}
@@ -75,5 +80,5 @@
 	}
 
     .has-sans-title #banner h1 {
-        font-family: _font(family);
+        font-family: functions.font(family);
     }

@@ -1,3 +1,10 @@
+@use "sass:color";
+@use "sass:math";
+@use "../libs/breakpoints";
+@use "../libs/functions";
+@use "../libs/mixins";
+@use "../libs/vendor";
+
 ///
 /// Editorial by HTML5 UP
 /// html5up.net | @ajlkn
@@ -6,61 +13,61 @@
 
 /* Sidebar */
 
-	#search {
+#search {
 		form {
-			@include icon;
+			@include mixins.icon;
 			position: relative;
 
 			&:before {
-				@include vendor('transform', 'scaleX(-1)');
-				color: _palette(fg);
+				@include vendor.vendor('transform', 'scaleX(-1)');
+				color: functions.palette(fg);
 				content: '\f002';
 				cursor: default;
 				display: block;
 				font-size: 1.5em;
-				height: _size(element-height) / 1.375;
-				line-height: _size(element-height) / 1.375;
+				height: math.div(functions.size(element-height), 1.375);
+				line-height: math.div(functions.size(element-height), 1.375);
 				opacity: 0.325;
 				position: absolute;
 				right: 0;
 				text-align: center;
 				top: 0;
-				width: _size(element-height) / 1.375;
+				width: math.div(functions.size(element-height), 1.375);
 			}
 
 			input[type="text"] {
-				padding-right: _size(element-height);
+				padding-right: functions.size(element-height);
 			}
 		}
 	}
 
 	#sidebar {
-		$pad: 2em / 0.9;
+		$pad: math.div(2em, 0.9);
 
-		@include vendor('flex-grow', '0');
-		@include vendor('flex-shrink', '0');
-		@include vendor('transition', (
+		@include vendor.vendor('flex-grow', '0');
+		@include vendor.vendor('flex-shrink', '0');
+		@include vendor.vendor('transition', (
 			'margin-left 0.5s ease',
 			'box-shadow 0.5s ease'
 		));
-		background-color: _palette(bg-alt);
+		background-color: functions.palette(bg-alt);
 		font-size: 0.9em;
 		position: relative;
-		width: _size(sidebar-width);
+		width: functions.size(sidebar-width);
 
 		h2 {
-			font-size: (1.25em / 0.9);
+			font-size: math.div(1.25em, 0.9);
 		}
 
 		> .inner {
-			@include padding($pad, $pad, (0, 0, $pad, 0));
+			@include mixins.padding($pad, $pad, (0, 0, $pad, 0));
 			position: relative;
-			width: _size(sidebar-width);
+			width: functions.size(sidebar-width);
 
 			> * {
-				border-bottom: solid 2px _palette(border);
-				margin: 0 0 (_size(element-margin) * 1.75) 0;
-				padding: 0 0 (_size(element-margin) * 1.75) 0;
+				border-bottom: solid 2px functions.palette(border);
+				margin: 0 0 (functions.size(element-margin) * 1.75) 0;
+				padding: 0 0 (functions.size(element-margin) * 1.75) 0;
 
 				> :last-child {
 					margin-bottom: 0;
@@ -74,7 +81,7 @@
 			}
 
 			> .alt {
-				background-color: darken(_palette(bg-alt), 2);
+				background-color: color.adjust(functions.palette(bg-alt), $lightness: -2%);
 				border-bottom: 0;
 				margin: ($pad * -1) 0 ($pad * 2) ($pad * -1);
 				padding: $pad;
@@ -83,13 +90,13 @@
 		}
 
 		.toggle {
-			@include icon;
-			@include vendor('transition', 'left 0.5s ease');
+			@include mixins.icon;
+			@include vendor.vendor('transition', 'left 0.5s ease');
 			-webkit-tap-highlight-color: rgba(255,255,255,0);
 			border: 0;
 			display: block;
 			height: 7.5em;
-			left: _size(sidebar-width);
+			left: functions.size(sidebar-width);
 			line-height: 7.5em;
 			outline: 0;
 			overflow: hidden;
@@ -98,7 +105,7 @@
 			text-indent: 7.5em;
 			top: 0;
 			width: 6em;
-			z-index: _misc(z-index-base);
+			z-index: functions.misc(z-index-base);
 
 			&:before {
 				content: '\f0c9';
@@ -114,17 +121,17 @@
 		}
 
 		&.inactive {
-			margin-left: (_size(sidebar-width) * -1);
+			margin-left: (functions.size(sidebar-width) * -1);
 		}
 
-		@include breakpoint('<=xlarge') {
-			$pad: 1.5em / 0.9;
+		@include breakpoints.breakpoint('<=xlarge') {
+			$pad: math.div(1.5em, 0.9);
 
-			width: _size(sidebar-width-alt);
+			width: functions.size(sidebar-width-alt);
 
 			> .inner {
-				@include padding($pad, $pad, (0, 0, $pad, 0));
-				width: _size(sidebar-width-alt);
+				@include mixins.padding($pad, $pad, (0, 0, $pad, 0));
+				width: functions.size(sidebar-width-alt);
 
 				> .alt {
 					margin: ($pad * -1) 0 ($pad * 2) ($pad * -1);
@@ -135,7 +142,7 @@
 
 			.toggle {
 				height: 6.25em;
-				left: _size(sidebar-width-alt);
+				left: functions.size(sidebar-width-alt);
 				line-height: 6.25em;
 				text-indent: 5em;
 				width: 5em;
@@ -146,17 +153,17 @@
 			}
 
 			&.inactive {
-				margin-left: (_size(sidebar-width-alt) * -1);
+				margin-left: (functions.size(sidebar-width-alt) * -1);
 			}
 		}
 
-		@include breakpoint('<=large') {
+		@include breakpoints.breakpoint('<=large') {
 			box-shadow: 0 0 5em 0 rgba(0, 0, 0, 0.175);
 			height: 100%;
 			left: 0;
 			position: fixed;
 			top: 0;
-			z-index: _misc(z-index-base);
+			z-index: functions.misc(z-index-base);
 
 			&.inactive {
 				box-shadow: none;
@@ -185,7 +192,7 @@
 
 				&:before {
 					font-size: 1.5rem;
-					margin-left: (-0.875em / 2);
+					margin-left: (-0.875em * 0.5);
 				}
 			}
 
@@ -194,22 +201,22 @@
 			}
 		}
 
-		@include breakpoint('<=small') {
+		@include breakpoints.breakpoint('<=small') {
 			.toggle {
 				text-indent: 7.25em;
 				width: 7.25em;
 
 				&:before {
-					color: _palette(fg);
-					margin-left: (-0.125em / 2);
-					margin-top: (-0.5em / 2);
+					color: functions.palette(fg);
+					margin-left: (-0.125em * 0.5);
+					margin-top: (-0.5em * 0.5);
 					font-size: 1.1rem;
 					z-index: 1;
 				}
 
 				&:after {
-					background: transparentize(lighten(_palette(fg), 35), 0.25);
-					border-radius: _size(border-radius);
+					background: color.adjust(color.adjust(functions.palette(fg), $lightness: 35%), $alpha: -0.25);
+					border-radius: functions.size(border-radius);
 					content: '';
 					height: 3.5em;
 					left: 1em;

@@ -1,3 +1,8 @@
+@use "sass:math";
+@use "../libs/breakpoints";
+@use "../libs/functions";
+@use "../libs/vendor";
+
 ///
 /// Editorial by HTML5 UP
 /// html5up.net | @ajlkn
@@ -6,21 +11,21 @@
 
 /* Header */
 
-	#header {
-		@include vendor('display', 'flex');
+#header {
+		@include vendor.vendor('display', 'flex');
 		border-bottom: solid 5px var(--color-primary);
 		padding: 6em 0 1em 0;
 		position: relative;
 
 		> * {
-			@include vendor('flex', '1');
+			@include vendor.vendor('flex', '1');
 			margin-bottom: 0;
 		}
 
 		.logo {
 			border-bottom: 0;
 			color: inherit;
-			font-family: _font(family-heading);
+			font-family: functions.font(family-heading);
 			font-size: 1.125em;
 		}
 
@@ -28,11 +33,11 @@
 			text-align: right;
 		}
 
-		@include breakpoint('<=xlarge') {
+		@include breakpoints.breakpoint('<=xlarge') {
 			padding-top: 5em;
 		}
 
-		@include breakpoint('<=small') {
+		@include breakpoints.breakpoint('<=small') {
 			padding-top: 6.5em;
 
 			.logo {
@@ -41,10 +46,10 @@
 			}
 
 			.icons {
-				height: (6.25em / 1.25);
-				line-height: (6.25em / 1.25);
+				height: math.div(6.25em, 1.25);
+				line-height: math.div(6.25em, 1.25);
 				position: absolute;
-				right: (-0.625em / 1.25);
+				right: math.div(-0.625em, 1.25);
 				top: 0;
 			}
 		}
