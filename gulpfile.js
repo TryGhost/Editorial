@@ -2,10 +2,10 @@ const {series, watch, src, dest, parallel} = require('gulp');
 const pump = require('pump');
 
 // gulp plugins and utils
-var livereload = require('gulp-livereload');
-var sass = require('gulp-sass');
-var zip = require('gulp-zip');
-var beeper = require('beeper');
+const livereload = require('gulp-livereload');
+const sass = require('gulp-sass')(require('node-sass'));
+const zip = require('gulp-zip').default;
+const beeper = require('beeper');
 
 function serve(done) {
     livereload.listen();
@@ -20,8 +20,6 @@ const handleError = (done) => {
         return done(err);
     };
 };
-
-sass.compiler = require('node-sass');
 
 function hbs(done) {
     pump([
@@ -40,16 +38,19 @@ function css(done) {
 }
 
 function zipper(done) {
-    var targetDir = 'dist/';
-    var themeName = require('./package.json').name;
-    var filename = themeName + '.zip';
+    const targetDir = 'dist/';
+    const themeName = require('./package.json').name;
+    const filename = themeName + '.zip';
 
     pump([
+        // encoding: false keeps binary assets (fonts, images) as buffers; gulp 5 /
+        // vinyl-fs 4 otherwise decode files as UTF-8 and corrupt them in the zip.
         src([
             '**',
             '!node_modules', '!node_modules/**',
-            '!dist', '!dist/**'
-        ]),
+            '!dist', '!dist/**',
+            '!pnpm-lock.yaml'
+        ], {encoding: false}),
         zip(filename),
         dest(targetDir)
     ], handleError(done));

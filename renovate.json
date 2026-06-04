@@ -2,5 +2,12 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "local>TryGhost/renovate-config:theme.json5"
+  ],
+  "packageRules": [
+    {
+      "description": "gulp-sass v6 drops the legacy API that node-sass implements and breaks the build. Stay on v5 until the Sass toolchain is migrated off node-sass (TryGhost/Editorial#76).",
+      "matchPackageNames": ["gulp-sass"],
+      "allowedVersions": "<6"
+    }
   ]
 }
